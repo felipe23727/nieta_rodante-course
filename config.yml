@@ -1,0 +1,16 @@
+title: nieta_rodante
+description: '  use bots nieta rodante'
+template:
+  repo: nieta_rodante-template
+  name: nieta_rodante
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
